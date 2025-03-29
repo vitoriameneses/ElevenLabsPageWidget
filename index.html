@@ -9,5 +9,16 @@
       <h1>hello world</h1>
       <elevenlabs-convai agent-id="PUhOs2AJ6VE2go83633T"></elevenlabs-convai>
     </div>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', async () => {
+        try {
+          await navigator.mediaDevices.getUserMedia({ audio: true });
+          console.log("Microphone allowed.");
+        } catch (err) {
+          console.error("Permission of microphone denied. Error:", err);
+        }
+      });
+    </script>
   </body>
 </html>
